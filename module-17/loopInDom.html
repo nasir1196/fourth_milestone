@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop in Dom</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            padding: 5px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <article>
+          <h3 class="author">Author-1</h3>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+            magnam suscipit ullam numquam saepe quod. Dolorum ex natus minima
+            labore eum eos harum! Perspiciatis beatae impedit neque, repudiandae
+            maxime voluptates.
+          </p>
+        </article>
+        <article>
+          <h3 class="author">Author-2</h3>
+          <p class="description">
+            Fugit, quibusdam eius. Dolores aut possimus ad doloribus id eum
+            temporibus obcaecati eius. Explicabo maxime, et inventore commodi
+            repellendus, quasi veritatis facilis voluptas sequi ad voluptatum in
+            asperiores nobis fugit.
+          </p>
+        </article>
+        <article>
+          <h3 class="author">Author-3</h3>
+          <p class="description">
+            Harum natus temporibus, vitae est consequuntur cumque in maxime?
+            Voluptate vero dolores facilis aspernatur ea omnis excepturi,
+            debitis perspiciatis modi dolorem dolorum voluptas repudiandae,
+            delectus ratione quasi? Deserunt, soluta nihil.
+          </p>
+        </article>
+        <article>
+          <h3 class="author">Author-4</h3>
+          <p class="description">
+            Laudantium nemo maiores totam, illo eum cumque omnis adipisci
+            incidunt explicabo recusandae quaerat fugiat ea iusto! Aliquid
+            assumenda laboriosam aut saepe repellat officia voluptate
+            consequuntur soluta, excepturi facilis eaque quae?
+          </p>
+        </article>
+      </section>
+    </main>
+    <script>
+        var author=document.getElementsByClassName('author');
+        for(var i=0; i<author.length; i++){
+            var element=author[i];
+            // console.log(element);
+            element.style.backgroundColor="yellow";
+            element.style.fontSize="30px";
+            element.innerHTML="Lekhok"+(i+1);
+        }
+    </script>
+  </body>
+</html>
