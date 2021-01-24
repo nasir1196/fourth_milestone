@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loop in Dom</title>
     <style>
-        article{
-            border: 2px solid tomato;
-            padding: 5px;
-            margin: 5px;
-            border-radius: 5px;
-        }
+      article {
+        border: 2px solid tomato;
+        padding: 5px;
+        margin: 5px;
+        border-radius: 5px;
+      }
     </style>
   </head>
   <body>
     <main>
       <section>
-        <article>
+        <article id="first-article">
           <h3 class="author">Author-1</h3>
           <p class="description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
@@ -24,6 +24,12 @@
             labore eum eos harum! Perspiciatis beatae impedit neque, repudiandae
             maxime voluptates.
           </p>
+          <ul id="first-article">
+            <li>gift-list-1</li>
+            <li>gift-list-2</li>
+            <li>gift-list-3</li>
+            <li>gift-list-4</li>
+          </ul>
         </article>
         <article>
           <h3 class="author">Author-2</h3>
@@ -43,7 +49,7 @@
             delectus ratione quasi? Deserunt, soluta nihil.
           </p>
         </article>
-        <article>
+        <article id="fourth-article">
           <h3 class="author">Author-4</h3>
           <p class="description">
             Laudantium nemo maiores totam, illo eum cumque omnis adipisci
@@ -55,15 +61,29 @@
       </section>
     </main>
     <script>
-        document.body.style.backgroundColor='tomato';
-        var author=document.getElementsByClassName('author');
-        for(var i=0; i<author.length; i++){
-            var element=author[i];
-            // console.log(element);
-            element.style.backgroundColor="yellow";
-            element.style.fontSize="30px";
-            element.innerHTML="Lekhok"+(i+1);
-        }
+      // add any element in html
+      var ul = document.getElementById("first-article");
+      var li = document.createElement("li");
+      li.innerHTML = "Brand new gift";
+      ul.appendChild(li);
+
+      var article = document.getElementById("fourth-article");
+      var para = document.createElement("p");
+      para.innerHTML = "Hello Honey Buney come here";
+      article.appendChild(para);
+
+      // add backgroundColor in html body
+      document.body.style.backgroundColor = "tomato";
+      
+      // chenge any heading name using for loop
+      var author = document.getElementsByClassName("author");
+      for (var i = 0; i < author.length; i++) {
+        var element = author[i];
+        // console.log(element);
+        element.style.backgroundColor = "yellow";
+        element.style.fontSize = "30px";
+        element.innerHTML = "Lekhok - " + (i + 1);
+      }
     </script>
   </body>
 </html>
