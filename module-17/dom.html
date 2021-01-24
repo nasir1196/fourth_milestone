@@ -10,15 +10,17 @@
       <section>
         <article>
           <h1>Dom</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
-            ducimus!
-          </p>
+          <p id="first">this is first paragraph</p>
+          <p>this is second paragraph</p>
         </article>
       </section>
     </main>
-    <script>
-        console.log(document.body);
+    <script>     
+        var first=document.getElementById('first');
+        first.style.color='red';
+        first.style.backgroundColor='yellow';
+        first.style.fontSize='30px';
+        first.style.fontWeight='bold';
     </script>
   </body>
 </html>
