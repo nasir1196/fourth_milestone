@@ -8,13 +8,21 @@
   <body>
     <main>
       <section>
-        <h1 onmousemove="handleClick()">Explore Even Management Function</h1>
+        <h1 onclick="handleClick()">Explore Even Management Function</h1>
         <button onclick="handleClick()">Click Me</button>
+        <button onclick="showTime()">show time</button>
+        <button onmouseout="warning()">Warning</button>
       </section>
     </main>
     <script>
+      function warning() {
+        alert("Don't tell a lie");
+      }
+      function showTime() {
+        document.write(new Date());
+      }
       function handleClick() {
-        console.log("Someone over me");
+        document.write("Someone over me");
       }
     </script>
   </body>
