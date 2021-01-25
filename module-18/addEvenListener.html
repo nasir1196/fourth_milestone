@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Even Listener</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>Exploring Add Even Listener Function</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta quis
+          vero eum unde quam adipisci sapiente dolorum, molestias saepe nobis.
+        </p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <form action="">
+          <button id="firstButton">Click Me-1</button>
+          <button id="secondButton">Click Me-2</button>
+          <button id="thirdButton">Click Me-3</button>
+          <button id="fourthButton">Click Me-4</button>
+          <button id="fifthButton">Click Me-5</button>
+        </form>
+      </section>
+    </main>
+    <script>
+      function changeFontColor() {
+        document.body.style.color = "tomato";
+        document.body.style.backgroundColor='blue';
+      }
+      const button1 = document.getElementById("firstButton");
+      button1.addEventListener("click", changeFontColor);
+
+      // change backgroundColor
+      function changeBackgroundColor() {
+        document.body.style.backgroundColor = "cyan";
+      }
+      const button2 = document.getElementById("secondButton");
+      //   button2.addEventListener("click", changeBackgroundColor);
+      button2.onclick = changeBackgroundColor;
+      document
+        .getElementById("secondButton")
+        .addEventListener("click", function () {
+          document.body.style.color = "red";
+        });
+      document
+        .getElementById("thirdButton")
+        .addEventListener("click", function () {
+          document.body.style.color = "yellow";
+          document.body.style.backgroundColor = "gray";
+        });
+      document
+        .getElementById("fourthButton")
+        .addEventListener("click", function () {
+          document.body.style.color = "green";
+          document.body.style.backgroundColor = "goldenrod";
+        });
+      document
+        .getElementById("fifthButton")
+        .addEventListener("click", function () {
+          document.body.style.color = "orange";
+          document.body.style.backgroundColor = "black";
+        });
+    </script>
+  </body>
+</html>
