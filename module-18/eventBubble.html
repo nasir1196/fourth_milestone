@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubble</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div id="container">
+          <h1>Explore Event Bubble</h1>
+          <ul id="myList">
+            <li id="item-1" class="items">Lorem ipsum dolor sit amet.</li>
+            <li id="item-2" class="items">
+              Molestiae quo laboriosam dolorem doloribus.
+            </li>
+            <li id="item-3" class="items">
+              Quae possimus impedit deleniti exercitationem?
+            </li>
+            <li id="item-4" class="items">
+              Ut dolorum suscipit tempora maiores?
+            </li>
+            <li id="item-5" class="items">Dignissimos et nam ut earum!</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <script>
+      document.getElementById("item-1").addEventListener("click", function () {
+        console.log("click first item");
+      });
+      document
+        .getElementById("container")
+        .addEventListener("click", function () {
+          console.log("click container");
+        });
+      document.getElementById("item-5").addEventListener("click", function () {
+        console.log("click fifth item");
+      });
+      document.getElementById("item-2").addEventListener("click", function () {
+        console.log("click second item");
+      });
+      document.getElementById("item-3").addEventListener("click", function () {
+        console.log("click third item");
+      });
+      document.getElementById("item-4").addEventListener("click", function () {
+        console.log("click fourth item");
+      });
+    </script>
+  </body>
+</html>
