@@ -3,6 +3,7 @@ function callBack(name, age, task) {
   console.log("Your age : ", age);
   task();
 }
+// passing function as an argument/parameter
 function drinkCoffee() {
   console.log("Drink Coffee");
 }
