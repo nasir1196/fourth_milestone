@@ -53,5 +53,13 @@ body{
 	background-color: #2FBE70;
 	border: none;
 }
+#pursing-area{
+	/* display: none; */
+}
+.pursing-box{
+	width: 50%;
+	height: 10rem;
+	box-shadow: 0.5rem 0.5rem 1rem gray;
 
+}
 
