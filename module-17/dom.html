@@ -12,10 +12,15 @@
           <h1>Dom</h1>
           <p id="first">this is first paragraph</p>
           <p>this is second paragraph</p>
+          <button id="btn">click me</button>
         </article>
       </section>
     </main>
-    <script>     
+    <script> 
+    document.getElementById('btn').addEventListener('click',function(){
+      document.body.style.backgroundColor="cyan";
+    })
+    document.body.style.color='red';    
         var first=document.getElementById('first');
         first.style.color='red';
         first.style.backgroundColor='yellow';
