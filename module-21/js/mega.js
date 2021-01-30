@@ -153,12 +153,15 @@ function submitTicket() {
     const purchase = document.getElementById('grand-total').innerText = grandTotal;
     document.getElementById('purchase').innerText = purchase;
 }
-const bookNow = document.getElementById('book-now');
-bookNow.addEventListener('click', function () {
+function getSubmit() {
     const buyArea = document.getElementById('buy-area');
     buyArea.style.display = 'none';
     const submitArea = document.getElementById('submit-area');
     submitArea.style.display = 'block';
+}
+const bookNow = document.getElementById('book-now');
+bookNow.addEventListener('click', function () {
+    getSubmit();
     submitTicket();
 })
 
